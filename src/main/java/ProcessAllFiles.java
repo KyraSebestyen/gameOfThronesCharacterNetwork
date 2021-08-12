@@ -11,7 +11,7 @@ public class ProcessAllFiles {
     private PersonBuilder personBuilder = new PersonBuilder();
 
     public List<Episode> process() {
-        Collection<File> files = FileUtils.listFiles(new File("C:/Users/micro/IdeaProjects/gameOfThrones3/src/main/resources"), null, false);
+        Collection<File> files = FileUtils.listFiles(new File("C:/Users/micro/IdeaProjects/gameOfThrones3/src/main/resources/season8"), null, false);
         return files.stream().map(file -> {
             try {
                 return new InformationReader(file, personBuilder).read().setName(file.getName());
